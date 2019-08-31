@@ -1,0 +1,316 @@
+.container-investors-developers{
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .top-element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(60, 60, 60, 0.75);
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 65%;
+      transform: translateX(-65%);
+      border-bottom: 90px solid #262626;
+      border-left: 90px solid transparent;
+      border-right: 90px solid transparent;
+    }
+  }
+
+  .main-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 450px;
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+
+    .picture{
+      height: 400px;
+      width: 500px;
+      border-radius: 10px;
+      filter: brightness(0.5);
+
+      img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .describe-for-investors-developers{
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      width: 600px;
+      margin-left: 15px;
+
+      .header-investors-developers{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        margin: 0;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translate(-50%);
+          width: 70%;
+          height: 1px;
+          background: #666666;
+        }
+
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -6px;
+          left: 50%;
+          transform: translate(-50%);
+          width: 5%;
+          height: 3px;
+          background: crimson;
+          z-index: 2;
+        }
+      }
+
+      p{
+        width: 85%;
+        margin: 20px auto 0 auto;
+        color: white;
+        font-size: 16.5px;
+        text-align: center;
+      }
+    }
+
+    ul{
+      margin: 20px 0 0 70px;
+      padding: 0;
+
+      li{
+        position: relative;
+        margin: 5px;
+        color: #999999;
+        font-size: 20px;
+        letter-spacing: 23px;
+
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -5px;
+          bottom: 0;
+          width: 25px;
+          background: #555555;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .bottom-element{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(60, 60, 60, 0.75);
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 31%;
+      transform: translateX(-31%) rotate(180deg);
+      border-bottom: 90px solid #262626;
+      border-left: 90px solid transparent;
+      border-right: 90px solid transparent;
+    }
+  }
+}
+
+@media all and(max-width: 1150px){
+  .container-investors-developers{
+    .main-part{
+      .describe-for-investors-developers{
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 1020px){
+  .container-investors-developers{
+    .main-part{
+      .describe-for-investors-developers{
+        p{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 900px){
+  .container-investors-developers{
+    .top-element{
+      height: 15%;
+      &::after{
+        left: 85%;
+        transform: translateX(-85%);
+        border-bottom: 70px solid #262626;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+      }
+    }
+    .main-part{
+      flex-direction: column;
+      padding: 15px;
+      .picture{
+        height: 300px;
+        width: 60%;
+      }
+      .describe-for-investors-developers{
+        height: 250px;
+        width: 100%;
+        margin: 15px 0 0 0;
+        .header-investors-developers{
+          height: 30px;
+          line-height: 30px;
+          &::after{
+            bottom: -10px;
+          }
+          &::before{
+            bottom: -11px;
+          }
+        }
+        p{
+          font-size: 12px;
+          margin: 20px auto 0 auto;
+        }
+        ul{
+          margin: 2.5px 0 0 70px;
+          li{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .bottom-element{
+      height: 15%;
+      &::after{
+        left: 15%;
+        transform: translateX(-15%) rotate(180deg);
+        border-bottom: 70px solid #262626;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 600px){
+  .container-investors-developers{
+    .main-part{
+      .describe-for-investors-developers{
+        ul{
+          width: 100%;
+          margin: 10px 0 0 0;
+          li{
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 500px){
+  .container-investors-developers{
+    .main-part{
+      .describe-for-investors-developers{
+        p{
+          font-size: 11px;
+        }
+        ul{
+          margin: 15px 0 0 0;
+          li{
+            margin-left: 30px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 430px){
+  .container-investors-developers{
+    .top-element::after{
+      border-bottom: 50px solid #262626;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+    .main-part{
+      top: 45%;
+      transform: translateY(-45%);
+      .describe-for-investors-developers{
+        ul{
+          margin: 20px 0 0 0;
+          li{
+            margin-left: 15px;
+            font-size: 12px;
+            letter-spacing: 19px;
+          }
+        }
+      }
+    }
+    .bottom-element::after{
+      border-bottom: 50px solid #262626;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+  }
+}
+
+@media all and(max-width: 350px){
+  .container-investors-developers{
+    .main-part{
+      top: 42.5%;
+      transform: translateY(-42.5%);
+      .describe-for-investors-developers{
+        ul{
+          margin: 7.5px 0 0 0;
+          li{
+            margin-left: 15px;
+            font-size: 11px;
+            letter-spacing: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+

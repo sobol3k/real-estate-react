@@ -1,0 +1,304 @@
+/* loops */
+.generate-span-nth-child(@i: 1, @x: 80, @y: -80, @o: 1.2) when(@i =< 5){
+  &:hover span:nth-child(@{i}){
+    transform: translate(@y, @x);
+    opacity: @o;
+  }
+  .generate-span-nth-child((@i + 1), (@x - 20px), (@y + 20px), (@o - 0.2));
+}
+
+/* mixins */
+.a-mixin(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+
+.span-mixin(){
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* main-for-normal-devices */
+footer{
+  width: 100%;
+  height: 300px;
+  background: darken(crimson, 10%);
+
+  .social-media{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+
+    li{
+      width: 130px;
+      height: 130px;
+      background: white;
+      transform: rotate(-30deg) skew(25deg);
+
+      .facebook{
+        .a-mixin();
+        .generate-span-nth-child();
+        .fa-facebook-f{
+          color: white;
+          font-size: 50px;
+        }
+        span{
+          .span-mixin();
+        }
+      }
+
+      .google-plus{
+        .a-mixin();
+        .generate-span-nth-child();
+        .fa-google-plus-g{
+          color: white;
+          font-size: 50px;
+        }
+        span{
+          .span-mixin();
+        }
+      }
+
+      .instagram{
+        .a-mixin();
+        .generate-span-nth-child();
+        .fa-instagram{
+          color: white;
+          font-size: 50px;
+        }
+        span{
+          .span-mixin();
+        }
+      }
+
+      .linkedin{
+        .a-mixin();
+        .generate-span-nth-child();
+        .fa-linkedin-in{
+          color: white;
+          font-size: 50px;
+        }
+        span{
+          .span-mixin();
+        }
+      }
+
+      .youtube{
+        .a-mixin();
+        .generate-span-nth-child();
+        .fa-youtube{
+          color: white;
+          font-size: 50px;
+        }
+        span{
+          .span-mixin();
+        }
+      }
+    }
+  }
+}
+
+/* main-for-small-devices */
+footer{
+  .footer-for-small-devices{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    .flexible-element{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      height: 75%;
+      .col{
+        width: 250px;
+        height: 100%;
+        .header-for-small-devices{
+          margin: 25px 0 25px 0;
+          width: 100%;
+          text-align: center;
+          color: darken(white, 35%);
+          font-size: 20px;
+          letter-spacing: 1px;
+          text-transform: capitalize;
+          margin: 15px 0 0 0;
+        }
+        .menu-for-small-devices{
+          list-style-type: none;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          .menu-for-small-devices-element{
+            margin: 35px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .connect-with-us{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 25%;
+      .line{
+        height: 1px;
+        background: darken(white, 35%);
+      }
+      .line-1{
+        width: 15%;
+      }
+      .header-connect-with-us{
+        width: 25%;
+        margin: 0;
+        color: darken(white, 35%);
+        text-align: center;
+      }
+      .line-2{
+        width: 25%;
+      }
+      .social-media-for-small-devices{
+        width: 20%;
+        .social-media-for-small-devices-menu{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style-type: none;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          li{
+            display: inline-block;
+            color: #666666;
+            font-size: 30px;
+          }
+        }
+      }
+      .line-3{
+        width: 15%;
+      }
+    }
+  }
+}
+
+/* Responsive Web Design */
+@media all and(max-width: 1250px){
+  footer{
+    .social-media{
+      li{
+        width: 110px;
+        height: 110px;
+        .social-media-item{
+          .fab{
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 700px){
+  footer{
+    .footer-for-small-devices{
+      .flexible-element{
+        margin: 0;
+        .col{
+          .menu-for-small-devices{
+            .menu-for-small-devices-element{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .connect-with-us{
+        margin-top: 15px;
+        .header-connect-with-us{
+          font-size: 14px;
+        }
+        .social-media-for-small-devices{
+          .social-media-for-small-devices-menu{
+            li{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 550px){
+  footer{
+    height: 800px;
+    margin: 0;
+    .footer-for-small-devices{
+      .flexible-element{
+        align-items: center;
+        flex-direction: column;
+        .col{
+          width: 100%;
+        }
+        .col:not(.col-3){
+          padding-bottom: 50px;
+          border-bottom: 1px solid darken(white, 35%);
+        }
+      }
+      .connect-with-us{
+        margin-top: 30px;
+        height: 100px;
+        .header-connect-with-us{
+          font-size: 12px;
+        }
+        .social-media-for-small-devices{
+          .social-media-for-small-devices-menu{
+            li{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 400px){
+  footer{
+    .footer-for-small-devices{
+      .connect-with-us{
+        .header-connect-with-us{
+          font-size: 11px;
+        }
+        .social-media-for-small-devices{
+          .social-media-for-small-devices-menu{
+            li{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

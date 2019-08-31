@@ -1,26 +1,89 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Header from './layouts/Header';
+import Nav from './layouts/Nav';
+import Section from './layouts/Section';
+import Footer from './layouts/Footer';
+import RegistrationForm from './components/registration-account/RegistrationForm';
+import DeleteAccountModal from './components/removing-account/DeleteAccountModal';
+import './css/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      resolution: window.innerWidth, 
+      isLogged: false,
+      isOpenedForm: false, 
+      isVisibleMenu: false, 
+      isOpenedDeleteAccountModal: false,  
+    }
+  }
+
+  componentDidMount(){
+    window.onresize = () => {
+      this.setState({
+        resolution: window.innerWidth,
+      })
+    }
+  }
+
+  handleLoginClick = () => {
+    this.setState({
+      isLogged: !this.state.isLogged,
+    })
+  }
+
+  handleFormClick = () => {
+    this.setState({
+      isOpenedForm: !this.state.isOpenedForm,
+    })
+  }
+
+  handleMenuClick = () => {
+    document.body.classList.toggle('modal-is-open');
+    this.setState({
+      isVisibleMenu: !this.state.isVisibleMenu,
+    })
+  }
+
+  handleDeleteAccountModalClick = () => {
+    document.body.classList.toggle('modal-is-open');
+    this.setState({
+      isOpenedDeleteAccountModal: !this.state.isOpenedDeleteAccountModal,
+    })
+  }
+  
+  render(){
+    const {resolution, isLogged, isOpenedForm, isVisibleMenu, isOpenedDeleteAccountModal} = this.state;
+    return(
+      <>
+        <Router>
+          <>
+            <Header />
+            <Nav
+              isVisibleMenu={isVisibleMenu}
+              isOpenedForm={isOpenedForm}
+              isOpenedDeleteAccountModal={isOpenedDeleteAccountModal}
+              showForm={this.handleFormClick}
+              handleLoginClick={this.handleLoginClick} 
+              handleMenu={this.handleMenuClick}
+              handleDeleteAccountModal={this.handleDeleteAccountModalClick}
+            />
+            <Section 
+              handleForm={this.handleFormClick} 
+              handleLogin={this.handleLoginClick} 
+              isLogged={isLogged} 
+              resolution={resolution} 
+            />
+            <Footer resolution={resolution} />
+          </>
+        </Router>
+        {isOpenedForm && <RegistrationForm closeForm={this.handleFormClick} />}
+        {isOpenedDeleteAccountModal && <DeleteAccountModal closeModal={this.handleDeleteAccountModalClick} />}
+      </>
+    );
+  }
 }
 
 export default App;

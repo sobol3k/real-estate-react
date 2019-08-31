@@ -1,0 +1,60 @@
+.open-menu {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.open-menu:hover :nth-child(1) {
+  width: 30px;
+}
+.open-menu:hover :nth-child(2) {
+  width: 20px;
+}
+.open-menu:hover :nth-child(3) {
+  width: 10px;
+}
+.open-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 3.5px;
+  background: white;
+  transition: width 0.5s ease-in;
+}
+.close-menu {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+.close-menu:hover {
+  transform: rotate(180deg);
+}
+.close-menu span:nth-child(1),
+.close-menu span:nth-child(3) {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 3.5px;
+  background: white;
+  transition: width 0.5s ease-in;
+}
+.close-menu span:nth-child(1) {
+  position: absolute;
+  top: 15px;
+  transform: rotate(45deg);
+}
+.close-menu span:nth-child(3) {
+  transform: rotate(-45deg);
+}

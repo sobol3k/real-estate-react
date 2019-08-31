@@ -1,0 +1,391 @@
+
+.building-information-is-open::after{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+}
+
+.container-buildings{
+  width: 100%;
+  height: 100%;
+  padding-top: 75px;
+  box-sizing: border-box;
+
+  .info-about-too-small-resolution{
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .add-new-budiling{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    height: 70px;
+    background: #444444;
+    border: 1px solid gray;
+    margin: 5px auto;
+
+    .submit-building{
+      position: absolute;
+      left: 55px;
+      width: 45px;
+      height: 45px;
+      background: none;
+      border: 3px solid #999999;
+      border-radius: 50%;
+      color: #666;
+      font-size: 25px;
+      font-weight: 900;
+      outline: none;
+      text-align: center;
+      transform: perspective(100px);
+      animation-name: addBuilding;
+			animation-iteration-count: infinite;
+			animation-duration: 3000ms;
+      animation-timing-function: ease-in-out;
+      transition: color 300ms, border-color 300ms;
+      cursor: pointer;
+      
+      &:hover{
+        color: greenyellow;
+        border-color: greenyellow;
+      }
+    }
+
+    .field-to-add-new-building{
+      position: absolute;
+      left: 150px;
+      width: 400px;
+      height: 35px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 13px;
+      outline: none;
+    }
+  }
+
+  .building{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    height: 70px; 
+    background: #444444;
+    border: 1px solid gray;
+    margin: 5px auto;
+
+    .building-picture{
+      display: block;
+      position: absolute;
+      left: 50px;
+      width: 55px;
+      height: 55px;
+      border: 1px solid #222222;
+      border-radius: 50%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .building-name{
+      display: block;
+      position: absolute;
+      left: 150px;
+      font-size: 15px;
+    }
+
+    .building-onwer{
+      display: block;
+      position: absolute;
+      left: 380px;
+      font-size: 15px;
+    }
+
+    .building-information{
+      right: 150px;
+    }
+
+    .building-remove{
+      right: 50px;
+    }
+
+    .building-office-modules{
+      width: 100%;
+      height: 100px;
+      background: red;
+    }
+
+    .building-remove, .building-information{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      .fa-trash{
+        font-size: 25px;
+        color: lighten(#444444, 15%);
+      }
+
+      .fa-info{
+        font-size: 27px;
+        color: lighten(#444444, 15%);
+      }
+    }
+  }
+
+  .building-description{
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background: darken(white, 15%);
+    color: black;
+    z-index: 6;
+
+    .building-description-close-modal{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .building-description-menu{
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      bottom: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #444444; 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        li{
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+          border-radius: 50%;
+          background: #444444;
+          transition: background 300ms;
+          cursor: pointer;
+
+          &:hover{
+            background: orange;
+          }
+        }
+      }
+    }
+
+    .first-page-information{
+
+      .building-description-picture{
+        margin: 15px auto;
+        width: 125px;
+        height: 125px;
+        border: 1px solid black;
+        border-radius: 50%;
+
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+  
+      .building-description-header{
+        position: relative;
+        width: 100%;
+        font-size: 25px;
+        color: #444444;
+        text-align: center;
+  
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          transform: translate(-50%);
+          width: 50%;
+          height: 0.8px;
+          background: black;
+        }
+      }
+  
+      .building-description-paragraph{
+        margin: 20px auto 0 auto;
+        width: 90%;
+        height: 250px;
+        color: #444444;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+    .second-page-information{
+
+      .particulars{
+        width: 100%;
+        padding: 10px;
+        margin-top: 40px;
+
+        .particulars-row{
+          display: flex;
+          width: 100%;
+          margin-bottom: 19px;
+
+          label{
+            align-self: center;
+            font-size: 13px;
+            margin-right: 15px;
+          }
+
+          input[type="number"], select{
+            position: absolute;
+            right: 20px;
+            width: 200px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #444444;
+            background: transparent;
+            font-size: 15px;
+            outline: none;
+          }
+
+          input[type="number"]{
+            padding-left: 3px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+  .info-about-too-small-resolution{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+/* KeyFrames */
+@keyframes addBuilding{
+	0%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0.3;
+		transform: translateZ(-50px);
+	}
+}
+
+/* Responsive Web Design */
+@media all and(max-width: 850px){
+  .container-buildings{
+    .add-new-budiling{
+      width: 600px;
+    }
+    .building{
+      width: 600px;
+      .building-name{
+        font-size: 13px;
+        left: 125px;
+      }
+      .building-onwer{
+        font-size: 13px;
+        left: 300px;
+      }
+      .building-information{
+        right: 100px;
+      }
+      .building-remove{
+        right: 25px;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 620px){
+  .container-buildings{
+    .add-new-budiling{
+      width: 400px;
+      .submit-building{
+        left: 25px;
+        width: 40px;
+        height: 40px;
+      }
+      .field-to-add-new-building{
+        left: 75px;
+        font-size: 11px;
+      }
+    }
+    .building{
+      width: 400px;
+      .building-picture{
+        left: 25px;
+        width: 40px;
+        height: 40px;
+      }
+      .building-name{
+        font-size: 11px;
+        left: 75px;
+      }
+      .building-onwer{
+        font-size: 11px;
+        left: 200px;
+      }
+      .building-information{
+        right: 45px;
+      }
+      .building-remove{
+        right: 5px;
+      }
+    }
+  }
+}

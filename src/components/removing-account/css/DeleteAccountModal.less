@@ -1,0 +1,73 @@
+.delete-account-modal{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  width: 420px;
+  height: 280px;
+  background: darken(white, 5%);
+  border: 3px solid black;
+  z-index: 8;
+
+  .delete-account-modal-header{
+    position: relative;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-size: 19px;
+    box-sizing: border-box;
+  }
+
+  hr{
+    margin: 0;
+  }
+
+  .warning-message{
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .row-with-buttons{
+    display: flex;
+    justify-content: flex-end;
+
+    button[type="button"]{
+      width: 100px;
+      height: 40px;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .delete-account-btn{
+      margin-right: 5px;
+      background: #ff4040;
+    }
+
+    .save-account-btn{
+      margin-right: 10px;
+      background: #2e8b57;
+    }
+  }
+}
+
+@media all and (max-width: 450px){
+  .delete-account-modal{
+    width: 300px;
+    height: 280px;
+    .delete-account-modal-header{
+      font-size: 15px;
+    }
+    .warning-message{
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+html{
+  font-family: 'Lato', sans-serif;
+}
+
+.modal-is-open::after{
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9111);
+  z-index: 6;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,63 @@
+header {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+  background-position: 60% 60%;
+  background-size: cover;
+  border-bottom: 3px solid #999999;
+  transition: background-image 350ms ease-in-out;
+}
+header .main-header {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 40px;
+  color: white;
+}
+header .main-paragraph {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-55%);
+  left: 100px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+header .main-paragraph .awarded-word {
+  color: deepskyblue;
+}
+/* Responsive Web Design */
+@media all and (max-width: 700px) {
+  header .main-header {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 35px;
+  }
+  header .main-paragraph {
+    width: 100%;
+    top: 54%;
+    left: 0;
+    transform: translateY(-54%);
+    text-align: center;
+  }
+}
+@media all and (max-width: 550px) {
+  header .main-header {
+    font-size: 30px;
+  }
+  header .main-paragraph {
+    font-size: 13px;
+  }
+}
+@media all and (max-width: 450px) {
+  header .main-header {
+    font-size: 22px;
+  }
+  header .main-paragraph {
+    font-size: 12px;
+  }
+}

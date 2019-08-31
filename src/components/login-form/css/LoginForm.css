@@ -1,0 +1,183 @@
+.login-form {
+  width: 500px;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #444442;
+  border-radius: 8px;
+}
+.login-form .login-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+}
+.login-form .login-form-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background: #999;
+}
+.login-form .login-form-header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5%;
+  height: 2px;
+  background: crimson;
+  z-index: 2;
+}
+.login-form .login-form-paragraph {
+  width: 100%;
+  margin: -7px 0 10px 0;
+  font-size: 13px;
+  text-align: center;
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 75%;
+  margin-top: 5px;
+}
+.login-form form .login-form-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+}
+.login-form form .login-form-row .login-form-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 3px solid #434a52;
+  background: #777777;
+}
+.login-form form .login-form-row .login-form-icon .fas {
+  color: #444;
+  font-size: 20px;
+}
+.login-form form .login-form-row .login-input,
+.login-form form .login-form-row .password-input {
+  width: 350px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  padding: 0 5px 0 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #2d2d2d;
+  box-sizing: border-box;
+}
+.login-form form .login-form-row .login-form-button {
+  position: relative;
+  width: 403px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #999999;
+  transition: background 500ms;
+  cursor: pointer;
+}
+.login-form form .login-form-row .login-form-button::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -1500px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 300ms;
+}
+.login-form form .login-form-row .login-form-button:hover::after {
+  left: 50%;
+  transform: translateX(-50%) skewX(-30deg);
+}
+.login-form form .login-form-row .login-form-button:hover {
+  background: #595959;
+}
+@media all and (max-width: 650px) {
+  .login-form {
+    width: 400px;
+    height: 250px;
+  }
+  .login-form .login-form-header {
+    font-size: 18px;
+  }
+  .login-form .login-form-paragraph {
+    font-size: 11.5px;
+  }
+  .login-form form {
+    justify-content: flex-start;
+  }
+  .login-form form .login-form-row {
+    margin-bottom: -15px;
+  }
+  .login-form form .login-form-row .login-form-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .login-form form .login-form-row .login-form-icon .fas {
+    font-size: 15px;
+  }
+  .login-form form .login-form-row .login-input,
+  .login-form form .login-form-row .password-input {
+    width: 300px;
+    height: 35px;
+  }
+  .login-form form .login-form-row .login-form-button {
+    width: 343px;
+    height: 35px;
+  }
+}
+@media all and (max-width: 500px) {
+  .login-form {
+    width: 300px;
+    height: 250px;
+  }
+  .login-form .login-form-header {
+    font-size: 17px;
+  }
+  .login-form .login-form-paragraph {
+    font-size: 11px;
+  }
+  .login-form form {
+    justify-content: flex-start;
+  }
+  .login-form form .login-form-row .login-input,
+  .login-form form .login-form-row .password-input {
+    width: 230px;
+    height: 35px;
+  }
+  .login-form form .login-form-row .login-form-button {
+    width: 273px;
+    height: 35px;
+  }
+}

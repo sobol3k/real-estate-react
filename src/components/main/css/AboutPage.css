@@ -1,0 +1,128 @@
+.wrapper {
+  width: 60%;
+  margin-top: 25px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.wrapper .header-about-redd {
+  margin: -5px 0 5px 0;
+  text-align: center;
+  font-size: 35px;
+}
+.wrapper .paragraph-notice {
+  position: relative;
+  margin: 5px 0 5px 0;
+  text-align: center;
+  color: crimson;
+}
+.wrapper .paragraph-notice::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background: #999;
+}
+.wrapper .paragraph-notice::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5%;
+  height: 3px;
+  background: crimson;
+  z-index: 2;
+}
+.wrapper .first-paragraph {
+  margin: 40px auto 20px auto;
+  width: 50%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+.wrapper .info:not(.first-paragraph) {
+  margin: 20px auto;
+  width: 50%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+/* Responsive Web Design */
+@media all and (max-width: 1800px) {
+  section .wrapper .describe-for-whom .info {
+    width: 75%;
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 1350px) {
+  section .wrapper .describe-for-whom .info {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 1200px) {
+  section .wrapper .describe-for-whom .info {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 875px) {
+  section .wrapper .paragraph-notice {
+    font-size: 12px;
+  }
+  section .wrapper .paragraph-notice::after {
+    width: 100%;
+  }
+  section .wrapper .describe-for-whom .info {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 668px) {
+  section .wrapper .paragraph-notice::before {
+    top: 29px;
+  }
+  section .wrapper .paragraph-notice::after {
+    top: 30px;
+  }
+  section .wrapper .describe-for-whom .first-paragraph {
+    margin: 30px auto 20px auto;
+  }
+  section .wrapper .describe-for-whom .info {
+    width: 100%;
+  }
+}
+@media all and (max-width: 540px) {
+  section .wrapper .paragraph-notice::before {
+    top: 39px;
+  }
+  section .wrapper .paragraph-notice::after {
+    top: 40px;
+  }
+  section .wrapper .describe-for-whom .info {
+    font-size: 12px;
+    margin: 25px auto;
+  }
+}
+@media all and (max-width: 410px) {
+  section .wrapper .paragraph-notice::before {
+    top: 44px;
+  }
+  section .wrapper .paragraph-notice::after {
+    top: 45px;
+  }
+  section .wrapper .describe-for-whom {
+    margin-top: 32px;
+  }
+  section .wrapper .describe-for-whom .first-paragraph {
+    margin: 75px auto 20px auto;
+  }
+  section .wrapper .describe-for-whom .info {
+    margin: 15px auto;
+    font-size: 11px;
+  }
+}

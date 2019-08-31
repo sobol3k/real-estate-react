@@ -1,0 +1,20 @@
+.manage-button{
+  align-self: center;
+  position: absolute;
+  right: 100px;
+  color: darken(white, 25%);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: color 500ms;
+
+  &:hover{
+    color: crimson;
+  }
+}
+
+@media all and(max-width: 350px){
+  .manage-button{
+    right: 80px;
+  }
+}

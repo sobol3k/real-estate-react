@@ -1,0 +1,38 @@
+@arrow: '../../../img/arrows/right-arrow.png';
+
+.register-button{
+  position: absolute;
+  left: 10px;
+  background: #666;
+  text-align: left;
+  align-self: center;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: buttonface;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 77.5%;
+    width: 1.5px;
+    height: 100%;
+    background: black;
+  }
+
+  &::before{
+    content: url("@{arrow}");
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 80%;
+  }
+}

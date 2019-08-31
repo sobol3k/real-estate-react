@@ -1,0 +1,395 @@
+/* loops */
+/* mixins */
+/* main-for-normal-devices */
+footer {
+  width: 100%;
+  height: 300px;
+  background: #ad102f;
+}
+footer .social-media {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
+footer .social-media li {
+  width: 130px;
+  height: 130px;
+  background: white;
+  transform: rotate(-30deg) skew(25deg);
+}
+footer .social-media li .facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+footer .social-media li .facebook:hover span:nth-child(1) {
+  transform: translate(-80, 80);
+  opacity: 1.2;
+}
+footer .social-media li .facebook:hover span:nth-child(2) {
+  transform: translate(-60px, 60px);
+  opacity: 1;
+}
+footer .social-media li .facebook:hover span:nth-child(3) {
+  transform: translate(-40px, 40px);
+  opacity: 0.8;
+}
+footer .social-media li .facebook:hover span:nth-child(4) {
+  transform: translate(-20px, 20px);
+  opacity: 0.6;
+}
+footer .social-media li .facebook:hover span:nth-child(5) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+}
+footer .social-media li .facebook .fa-facebook-f {
+  color: white;
+  font-size: 50px;
+}
+footer .social-media li .facebook span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+footer .social-media li .google-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+footer .social-media li .google-plus:hover span:nth-child(1) {
+  transform: translate(-80, 80);
+  opacity: 1.2;
+}
+footer .social-media li .google-plus:hover span:nth-child(2) {
+  transform: translate(-60px, 60px);
+  opacity: 1;
+}
+footer .social-media li .google-plus:hover span:nth-child(3) {
+  transform: translate(-40px, 40px);
+  opacity: 0.8;
+}
+footer .social-media li .google-plus:hover span:nth-child(4) {
+  transform: translate(-20px, 20px);
+  opacity: 0.6;
+}
+footer .social-media li .google-plus:hover span:nth-child(5) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+}
+footer .social-media li .google-plus .fa-google-plus-g {
+  color: white;
+  font-size: 50px;
+}
+footer .social-media li .google-plus span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+footer .social-media li .instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+footer .social-media li .instagram:hover span:nth-child(1) {
+  transform: translate(-80, 80);
+  opacity: 1.2;
+}
+footer .social-media li .instagram:hover span:nth-child(2) {
+  transform: translate(-60px, 60px);
+  opacity: 1;
+}
+footer .social-media li .instagram:hover span:nth-child(3) {
+  transform: translate(-40px, 40px);
+  opacity: 0.8;
+}
+footer .social-media li .instagram:hover span:nth-child(4) {
+  transform: translate(-20px, 20px);
+  opacity: 0.6;
+}
+footer .social-media li .instagram:hover span:nth-child(5) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+}
+footer .social-media li .instagram .fa-instagram {
+  color: white;
+  font-size: 50px;
+}
+footer .social-media li .instagram span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+footer .social-media li .linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+footer .social-media li .linkedin:hover span:nth-child(1) {
+  transform: translate(-80, 80);
+  opacity: 1.2;
+}
+footer .social-media li .linkedin:hover span:nth-child(2) {
+  transform: translate(-60px, 60px);
+  opacity: 1;
+}
+footer .social-media li .linkedin:hover span:nth-child(3) {
+  transform: translate(-40px, 40px);
+  opacity: 0.8;
+}
+footer .social-media li .linkedin:hover span:nth-child(4) {
+  transform: translate(-20px, 20px);
+  opacity: 0.6;
+}
+footer .social-media li .linkedin:hover span:nth-child(5) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+}
+footer .social-media li .linkedin .fa-linkedin-in {
+  color: white;
+  font-size: 50px;
+}
+footer .social-media li .linkedin span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+footer .social-media li .youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+}
+footer .social-media li .youtube:hover span:nth-child(1) {
+  transform: translate(-80, 80);
+  opacity: 1.2;
+}
+footer .social-media li .youtube:hover span:nth-child(2) {
+  transform: translate(-60px, 60px);
+  opacity: 1;
+}
+footer .social-media li .youtube:hover span:nth-child(3) {
+  transform: translate(-40px, 40px);
+  opacity: 0.8;
+}
+footer .social-media li .youtube:hover span:nth-child(4) {
+  transform: translate(-20px, 20px);
+  opacity: 0.6;
+}
+footer .social-media li .youtube:hover span:nth-child(5) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+}
+footer .social-media li .youtube .fa-youtube {
+  color: white;
+  font-size: 50px;
+}
+footer .social-media li .youtube span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #071215;
+  z-index: -1;
+  transition: transform 500ms, opacity 500ms;
+}
+/* main-for-small-devices */
+footer .footer-for-small-devices {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+footer .footer-for-small-devices .flexible-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 75%;
+}
+footer .footer-for-small-devices .flexible-element .col {
+  width: 250px;
+  height: 100%;
+}
+footer .footer-for-small-devices .flexible-element .col .header-for-small-devices {
+  margin: 25px 0 25px 0;
+  width: 100%;
+  text-align: center;
+  color: #a6a6a6;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 15px 0 0 0;
+}
+footer .footer-for-small-devices .flexible-element .col .menu-for-small-devices {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-for-small-devices .flexible-element .col .menu-for-small-devices .menu-for-small-devices-element {
+  margin: 35px;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+footer .footer-for-small-devices .connect-with-us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+footer .footer-for-small-devices .connect-with-us .line {
+  height: 1px;
+  background: #a6a6a6;
+}
+footer .footer-for-small-devices .connect-with-us .line-1 {
+  width: 15%;
+}
+footer .footer-for-small-devices .connect-with-us .header-connect-with-us {
+  width: 25%;
+  margin: 0;
+  color: #a6a6a6;
+  text-align: center;
+}
+footer .footer-for-small-devices .connect-with-us .line-2 {
+  width: 25%;
+}
+footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices {
+  width: 20%;
+}
+footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices .social-media-for-small-devices-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices .social-media-for-small-devices-menu li {
+  display: inline-block;
+  color: #666666;
+  font-size: 30px;
+}
+footer .footer-for-small-devices .connect-with-us .line-3 {
+  width: 15%;
+}
+/* Responsive Web Design */
+@media all and (max-width: 1250px) {
+  footer .social-media li {
+    width: 110px;
+    height: 110px;
+  }
+  footer .social-media li .social-media-item .fab {
+    font-size: 40px;
+  }
+}
+@media all and (max-width: 700px) {
+  footer .footer-for-small-devices .flexible-element {
+    margin: 0;
+  }
+  footer .footer-for-small-devices .flexible-element .col .menu-for-small-devices .menu-for-small-devices-element {
+    font-size: 14px;
+  }
+  footer .footer-for-small-devices .connect-with-us {
+    margin-top: 15px;
+  }
+  footer .footer-for-small-devices .connect-with-us .header-connect-with-us {
+    font-size: 14px;
+  }
+  footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices .social-media-for-small-devices-menu li {
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 550px) {
+  footer {
+    height: 800px;
+    margin: 0;
+  }
+  footer .footer-for-small-devices .flexible-element {
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .footer-for-small-devices .flexible-element .col {
+    width: 100%;
+  }
+  footer .footer-for-small-devices .flexible-element .col:not(.col-3) {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #a6a6a6;
+  }
+  footer .footer-for-small-devices .connect-with-us {
+    margin-top: 30px;
+    height: 100px;
+  }
+  footer .footer-for-small-devices .connect-with-us .header-connect-with-us {
+    font-size: 12px;
+  }
+  footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices .social-media-for-small-devices-menu li {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 400px) {
+  footer .footer-for-small-devices .connect-with-us .header-connect-with-us {
+    font-size: 11px;
+  }
+  footer .footer-for-small-devices .connect-with-us .social-media-for-small-devices .social-media-for-small-devices-menu li {
+    font-size: 15px;
+  }
+}

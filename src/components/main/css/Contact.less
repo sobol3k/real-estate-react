@@ -1,0 +1,251 @@
+.contact-container{
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: #444442;
+
+  .contact-header{
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin: 15px 0 10px 0;
+  }
+
+  .contact-paragraph{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 0 0 15px 0;
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75%;
+      height: 1px;
+      background: #999;
+    }
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 29px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5%;
+      height: 3px;
+      background: crimson;
+      z-index: 2;
+    }
+  }
+
+  .contact-form{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin-top: 30px;
+
+    .contact-row-email, 
+    .contact-row-phone-number{
+      display: inline-block;
+      width: 50%;
+      margin-bottom: 20px;
+      text-align: center;
+
+      input[name="phoneNumber"]{
+        margin-left: -180px;
+      }
+
+      input[type="email"]{
+        margin-left: 177px;
+      }
+
+      input[name="phoneNumber"], input[name="email"]{
+        width: 200px;
+        height: 50px;
+        padding: 0 0 0 5px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #2d2d2d;
+        outline: none;
+      }
+    }
+
+    .contact-row{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+
+      input[name="name"]{
+        width: 420px;
+        height: 50px;
+        padding: 0 0 0 5px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #2d2d2d;
+        outline: none;
+      }
+
+      textarea[name="message"]{
+        width: 422px;
+        height: 200px;
+        padding: 10px 0 5px 5px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #2d2d2d;
+        outline: none;
+        resize: none;
+      }
+    }
+
+    .contact-send-button{
+      display: block;
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: #2d2d2d;
+      transition: background-color 0.5s;
+      cursor: pointer;
+
+      &:hover{
+        background-color: lighten(#2d2d2d, 25%);
+      }
+    }
+
+    .contact-display-succes{
+      width: 100%;
+      display: block;
+      color: green;
+      text-align: center;
+    }
+
+    .contact-display-error{
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: -30px;
+      color: red;
+      text-align: center;
+    }
+  }
+}
+
+/* Responsive Web Design */
+
+@media all and(max-width: 815px){
+  .contact-container{
+    width: 600px;
+    .contact-form{
+      .contact-row-email{
+        input[name="email"]{
+          margin-left: 75px;
+        }
+      }
+      .contact-row-phone-number{
+        input[name="phoneNumber"]{
+          margin-left: -80px;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 627px){
+  .contact-container{
+    width: 450px;
+    .contact-form{
+      .contact-row-email{
+        input[name="email"]{
+          margin-left: 5px;
+        }
+      }
+      .contact-row-phone-number{
+        input[name="phoneNumber"]{
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 485px){
+  section{
+    //background: #444442 !important;
+    .contact-container{
+      height: 650px;
+      width: 380px;
+      .contact-form{
+        .contact-row{
+          input[name="name"]{
+            width: 350px;
+          }
+          textarea[name="message"]{
+            width: 350px;
+          }
+        }
+        .contact-row-email,
+        .contact-row-phone-number{
+          width: 100%;
+          display: block;
+          margin: 0 0 20px 0;
+
+          input[name="email"], input[name="phoneNumber"]{
+            width: 350px;
+            margin: 0;
+          }
+        }
+        .contact-display-error{
+          font-size: 14px;
+          bottom: -20.5%;
+          transform: translateY(-20.5%);          
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 390px){
+  section{
+    .contact-container{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background: lighten(black, 20%);
+      .contact-form{
+        .contact-row{
+          input[name="name"]{
+            width: 280px;
+          }
+          textarea[name="message"]{
+            width: 280px;
+          }
+        }
+        .contact-row-email,
+        .contact-row-phone-number{
+          input[name="email"], input[name="phoneNumber"]{
+            width: 280px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
