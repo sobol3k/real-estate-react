@@ -1,13 +1,16 @@
 import React from 'react';
-import ManagementNav from './nav/ManagementNav';
+import Alert from './Alert';
 import AddingNewBuilding from './AddingNewBuilding';
+import ManagementNav from './nav/ManagementNav';
 import './css/BuildingsList.css';
 
 class Buildings extends React.Component{
   constructor(props){
     super(props)
     this.container = React.createRef();
+    this.IsUpdatedElement = React.createRef();
     this.state = {
+      isUpdated: false,
       isClicked: false,
       buildings: [
         {id: 0, picture: 'warsaw-spire.png', name: 'Warsaw Spire', owner: 'Immofinanz', totalSurface: 104300, category: 'A', status: 'istniejący',  
@@ -26,8 +29,15 @@ class Buildings extends React.Component{
     }
   }
 
+  componentDidUpdate(){
+    setTimeout(() => {
+      this.setState({
+        isUpdated: false,
+      })
+    }, 3500)
+  }
+
   handleChangeValue = (id, event) => {
-    console.log(event.target.name);
     const buildings = [...this.state.buildings];
     const index = buildings.findIndex(element => element.id === id);
     if(event.target.name === 'totalSurface'){
@@ -91,26 +101,7 @@ class Buildings extends React.Component{
         buildings: buildings,
       })
     }
-  }
-
-  handleBuildingInformation = (event) => {
-    if(event.target.classList.contains('building-information') || 
-       event.target.classList.contains('fa-info')){
-      this.container.current.classList.add('building-information-is-open');
-      event.target.closest('.building').lastElementChild.style.display = 'block';
-    } else{
-      this.container.current.classList.remove('building-information-is-open');
-      event.target.closest('.building-description').style.display = 'none';
-    }
-  }
-
-  handleRemoveBuilding = (id) => {
-    const buildings = [...this.state.buildings];
-    const index = buildings.findIndex(element => element.id === id);
-    buildings.splice(index, 1);
-    this.setState({
-      buildings: buildings,
-    })
+    return this.handleUpdate();
   }
 
   handleAddNewBuildingToState = (name) => {
@@ -138,16 +129,45 @@ class Buildings extends React.Component{
     this.setState({
       buildings: buildings,
     })
+    this.setState({
+      IsUpdated: true,
+    }) 
     /* when building will be added extend section element */
     const section = document.querySelector('section');
     const height = getComputedStyle(section).getPropertyValue('height').split('p')[0];
     const extendedHeight = parseFloat(height) + 70;
     return section.style.height = extendedHeight + 'px';
-    /* -------------------------------------------------- */ 
+    /* -------------------------------------------------- */
+  }
+
+  handleBuildingInformation = (event) => {
+    if(event.target.classList.contains('building-information') || 
+       event.target.classList.contains('fa-info')){
+      this.container.current.classList.add('building-information-is-open');
+      event.target.closest('.building').lastElementChild.style.display = 'block';
+    } else{
+      this.container.current.classList.remove('building-information-is-open');
+      event.target.closest('.building-description').style.display = 'none';
+    }
+  }
+
+  handleRemoveBuilding = (id) => {
+    const buildings = [...this.state.buildings];
+    const index = buildings.findIndex(element => element.id === id);
+    buildings.splice(index, 1);
+    this.setState({
+      buildings: buildings,
+    })
+  }
+
+  handleUpdate = () => {
+    this.setState({
+      isUpdated: true,
+    })
   }
 
   render(){
-    const {isClicked} = this.state;
+    const {isClicked, isUpdated} = this.state;
     const array = [...this.state.buildings];
     const url = "buildings-images/";
     const buildings = array.map(building => (
@@ -347,9 +367,7 @@ class Buildings extends React.Component{
       <div 
         className="container-buildings" 
         ref={this.container}>
-          <ManagementNav 
-            handleLogin={this.props.handleLogin} 
-          />
+          <ManagementNav handleLogin={this.props.handleLogin}  />
           {this.props.resolution >= 550 ?
           <React.Fragment>
             <AddingNewBuilding 
@@ -357,10 +375,27 @@ class Buildings extends React.Component{
               buildings={this.state.buildings} 
             />
             {buildings}
-          </React.Fragment> : 
-          <h1 className="info-about-too-small-resolution">
-            Poniższa podstrona wymaga urządzeń z większą rozdzielczością ekranu niż posiadasz!
-          </h1>}
+          </React.Fragment> : <Alert />}
+          <div style={{
+            display: 'block',
+            position: 'absolute',
+            top: '100px',
+            right: '350px',
+            height: '50px',
+            opacity: isUpdated === true ? 1 : 0,
+            paddingTop: '9px',
+            width: '140px',
+            borderRadius: '6px',
+            background: '#00a000',
+            color: 'white',
+            fontSize: '14px',
+            textAlign: 'center',
+            zIndex: '999',
+            boxSizing: 'border-box',
+            transition: 'opacity, 500ms',
+          }}>
+            Moduł został zaktualizowany
+          </div> 
       </div>
     );
   }

@@ -6,15 +6,15 @@
   left: 50%;
   transform: translate(-50%, -20%);
 
-  .header-about-redd{
+  .header-about-page{
     margin: -5px 0 5px 0;
     text-align: center;
     font-size: 35px;
   }
 
-  .paragraph-notice{
+  .paragraph-about-page{
     position: relative;
-    margin: 5px 0 5px 0;
+    margin: 0 0 5px 0;
     text-align: center;
     color: crimson;
 
@@ -22,10 +22,10 @@
       content: '';
       display: block;
       position: absolute;
-      top: 40px;
+      top: 33px;
       left: 50%;
       transform: translateX(-50%);
-      width: 50%;
+      width: 65%;
       height: 1px;
       background: #999;
     }
@@ -34,18 +34,18 @@
       content: '';
       display: block;
       position: absolute;
-      top: 39px;
+      top: 32px;
       left: 50%;
       transform: translateX(-50%);
       width: 5%;
-      height: 3px;
+      height: 4px;
       background: crimson;
       z-index: 2;
     }
   }
 
   .first-paragraph{
-    margin: 40px auto 20px auto;
+    margin: 25px auto 20px auto;
     width: 50%;
     font-size: 18px;
     text-align: center;
@@ -66,7 +66,7 @@
 @media all and(max-width: 1800px){
   section{
     .wrapper{
-      .describe-for-whom{
+      .describe-about-page{
         .info{
           width: 75%;
           font-size: 20px;
@@ -79,7 +79,7 @@
 @media all and(max-width: 1350px){
   section{
     .wrapper{
-      .describe-for-whom{
+      .describe-about-page{
         .info{
           font-size: 18px;
         }
@@ -91,7 +91,7 @@
 @media all and(max-width: 1200px){
   section{
     .wrapper{
-      .describe-for-whom{
+      .describe-about-page{
         .info{
           font-size: 16px;
         }
@@ -103,13 +103,16 @@
 @media all and(max-width: 875px){
   section{
     .wrapper{
-      .paragraph-notice{
+      .describe-about-page{
         font-size: 12px;
         &::after{
-          width: 100%;
+          top: 27px;
+        }
+        &::before{
+          top: 26px;
         }
       }
-      .describe-for-whom{
+      .describe-about-page{
         .info{
           font-size: 14px;
         }
@@ -118,18 +121,18 @@
   }
 }
 
-@media all and(max-width: 668px){
+@media all and(max-width: 685px){
   section{
     .wrapper{
-      .paragraph-notice{
+      .paragraph-about-page{
         &::before{
-          top: 29px;
+          top: 51px;
         }
         &::after{
-          top: 30px;
+          top: 52px;
         }
       }
-      .describe-for-whom{
+      .describe-about-page{
         .first-paragraph{
           margin: 30px auto 20px auto;
         }
@@ -144,15 +147,7 @@
 @media all and(max-width: 540px){
   section{
     .wrapper{
-      .paragraph-notice{
-        &::before{
-          top: 39px;
-        }
-        &::after{
-          top: 40px;
-        }
-      }
-      .describe-for-whom{
+      .describe-about-page{
         .info{
           font-size: 12px;
           margin: 25px auto;
@@ -165,15 +160,17 @@
 @media all and(max-width: 410px){
   section{
     .wrapper{
-      .paragraph-notice{
+      .paragraph-about-page{
         &::before{
-          top: 44px;
+          width: 10%;
+          top:69px;
         }
         &::after{
-          top: 45px;
+          width: 100%;
+          top: 70px;
         }
       }
-      .describe-for-whom{
+      .describe-about-page{
         margin-top: 32px;
         .first-paragraph{
           margin: 75px auto 20px auto;

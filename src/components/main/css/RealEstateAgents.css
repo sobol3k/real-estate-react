@@ -10,11 +10,11 @@
   transform: translate(-50%, -50%);
 }
 .container-real-estate-agents .real-estate-agents-picture {
-  height: 600px;
-  width: 60%;
+  height: 650px;
+  width: 50%;
   border: 2px solid #999999;
   border-radius: 8px;
-  filter: blur(3.5px);
+  filter: brightness(0.3333) blur(5px);
 }
 .container-real-estate-agents .real-estate-agents-picture img {
   height: 100%;

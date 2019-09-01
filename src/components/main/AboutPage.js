@@ -4,13 +4,13 @@ import './css/AboutPage.css';
 const AboutPage = () => {
   return(
     <div className="wrapper">
-      <h2 className="header-about-redd">
-        O REDD
+      <h2 className="header-about-page">
+        Commercial Real Estate
       </h2>
-      <p className="paragraph-notice">
+      <p className="paragraph-about-page">
         źródło danych dla profesjonalistów z branży nieruchomości
       </p>
-      <div className="describe-for-whom">
+      <div className="describe-about-page">
         <p className="first-paragraph info">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis placerat urna. 
         </p>

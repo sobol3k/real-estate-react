@@ -11,7 +11,7 @@ const Header = () => {
       } else{
         setHeaderLogo(logo + 1);
       } 
-    }, 10000)
+    }, 4000)
   })
   return(
     <header 
@@ -21,9 +21,9 @@ const Header = () => {
       }}
     >
      <h1 className="main-header">
-       Real Estate Digital Data
+       Commercial Real Estate Database
      </h1>
-     <p className="main-paragraph">
+     <p className="main-header-paragraph">
        Źródło danych dla
        <span className="awarded-word">
          &nbsp;

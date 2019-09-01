@@ -82,14 +82,14 @@ class RegisterForm extends React.Component{
           return false;
         }
       case 'password':
-        const passwordReg = new RegExp("^[A-Z]{1}[a-zA-Z0-9]{8,}$");
+        const passwordReg = new RegExp("^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=[^0-9]*[0-9]).{6,}$");
         if(passwordReg.test(password)){
           return true;
         } else{
           return false;
         }
       case 'repeatedPassword':
-        const repeatedPassworReg = new RegExp("^[A-Z]{1}[a-zA-Z0-9]{8,}$");
+        const repeatedPassworReg = new RegExp("^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=[^0-9]*[0-9]).{6,}$");
         if(repeatedPassworReg.test(repeatedPassword)){
           return true;
         } else{
@@ -156,7 +156,7 @@ class RegisterForm extends React.Component{
                 </input>
                 <span 
                   className="fas fa-info" 
-                  data-info-password="hasło musi zawierać minimum 8 znakow">
+                  data-info-password="hasło musi zawierac minimum 8 znaków, jedną dużą, jedną mała litere oraz cyfre.">
                 </span>
               </label>
             </div>

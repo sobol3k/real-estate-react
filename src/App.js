@@ -13,7 +13,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       resolution: window.innerWidth, 
-      isLogged: false,
+      isLogged: true,
       isOpenedForm: false, 
       isVisibleMenu: false, 
       isOpenedDeleteAccountModal: false,  
