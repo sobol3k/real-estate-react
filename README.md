@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a href="https://realestatewarsaw.000webhostapp.com/">
+ <strong>Live</strong>
+</a>
 
-## Available Scripts
+<h1>Commercial Real Estate Datatbase</h1>
+<hr>
+<p>
+Website about commercial real estate like offices buildings in the Warsaw city. Here you can learn to what is terms renting a office in prestigiousest buildings in city. The function which allowing on adding new building to database and management them like setting a rent, service charge, add on factor, cost of parking place. Database of application contains six buildings from Warsaw but like I said before you can add next if you want.
+</p>
 
-In the project directory, you can run:
+<strong>This app need a local storage in your browser to creating account!</strong>
 
-### `npm start`
+<h3>Header</h3>
+<hr>
+<img src="https://s6.ifotos.pl/img/headerpng_qssnhss.png" />
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>Creating Accout</h3>
+<hr>
+<p>Click the button below and fill in registration form.</p>
+<strong>The password of your account must contains</strong>
+<ul>
+ <li>one lowercase</li>
+ <li>one capital letter/li>
+ <li>one</li>
+</ul>
+<hr>
+<img src="https://s6.ifotos.pl/img/how-to-cr_qssnhsq.png" />
+<img src="https://s6.ifotos.pl/img/registrat_qssnhap.png" />
+<p>when you created account in app you can go to management subpage of buildings. Click in the management button.<p>
+<img src="https://s6.ifotos.pl/img/managemen_qssnhan.png" />
+ 
+ <h3>Login form</h3>
+ <hr>
+ <p>Fill out the form with the data you used during registration</p>
+ <img src="https://s6.ifotos.pl/img/login-for_qssnhae.png" />
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<h3>Management</h3>
+<hr>
+<p>Here you can add a new building or delete any building form list. If you can change data of building like ren, total surface, cost of parking udernground or ground and other important data like lease terms.</p>
+<img src="https://s6.ifotos.pl/img/managemen_qssnhaa.png" />
+<p>Click the icon of information and you will see a modal with describe of building, picture and form with data.</p>
+<img src="https://s6.ifotos.pl/img/modal-inf_qssnhqh.png" />
+<img src="https://s6.ifotos.pl/img/second-pa_qssnhqw.png" />
 
-### `npm test`
+<h3>Removing account</h3>
+<hr>
+<p>If you want to remove your account click in the crimson button which is located in top page.</p>
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Contact form</h3>
+<hr>
+<p>Contact with author, all data is needed.</p>
+<img src="https://s6.ifotos.pl/img/contact-f_qssnhqs.png" />
 
-### `npm run build`
+<h3>Subpages</h3>
+<hr>
+<strong>## Main</strong>
+<img src="https://s6.ifotos.pl/img/main-page_qssnrpp.png" />
+<strong>## About Page</strong>
+<img src="https://s6.ifotos.pl/img/about-pag_qssnrpx.png" />
+<strong>## For real estate agents</strong>
+<img src="https://s6.ifotos.pl/img/for-real-_qssnrhw.png" />
+<strong>## For investors and developers</strong>
+<img src="https://s6.ifotos.pl/img/for-inves_qssnrhx.png" />
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<p>Author: Kamil Sobolewski</p>
