@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import './css/Footer.css';
 
 const Footer = (props) => {
+  const [resolution, setResolution] = useState(null);
+  useEffect(() => {
+    window.onresize = () => {
+      setResolution(window.innerWidth);
+    }
+  })
   return(
     <footer>
-      {props.resolution > 1050 ?
+      {resolution > 1050 ?
         <ul className="social-media">
           <li>
             <Link to="#" className="social-media-item facebook">

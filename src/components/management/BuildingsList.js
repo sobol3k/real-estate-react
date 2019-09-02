@@ -1,5 +1,4 @@
 import React from 'react';
-import Alert from './Alert';
 import AddingNewBuilding from './AddingNewBuilding';
 import ManagementNav from './nav/ManagementNav';
 import './css/BuildingsList.css';
@@ -8,9 +7,7 @@ class Buildings extends React.Component{
   constructor(props){
     super(props)
     this.container = React.createRef();
-    this.IsUpdatedElement = React.createRef();
     this.state = {
-      isUpdated: false,
       isClicked: false,
       buildings: [
         {id: 0, picture: 'warsaw-spire.png', name: 'Warsaw Spire', owner: 'Immofinanz', totalSurface: 104300, category: 'A', status: 'istniejący',  
@@ -27,14 +24,6 @@ class Buildings extends React.Component{
         year: 2006, leasingTime: 5, currency: 'EUR', rentFrom: 20.00, rentTo: 26.50, serviceCharge: 21.50, addOnFactor: 6.36, groundParking: null, undergroundParking: 250.00},
       ],
     }
-  }
-
-  componentDidUpdate(){
-    setTimeout(() => {
-      this.setState({
-        isUpdated: false,
-      })
-    }, 3500)
   }
 
   handleChangeValue = (id, event) => {
@@ -101,7 +90,6 @@ class Buildings extends React.Component{
         buildings: buildings,
       })
     }
-    return this.handleUpdate();
   }
 
   handleAddNewBuildingToState = (name) => {
@@ -129,9 +117,6 @@ class Buildings extends React.Component{
     this.setState({
       buildings: buildings,
     })
-    this.setState({
-      IsUpdated: true,
-    }) 
     /* when building will be added extend section element */
     const section = document.querySelector('section');
     const height = getComputedStyle(section).getPropertyValue('height').split('p')[0];
@@ -160,14 +145,8 @@ class Buildings extends React.Component{
     })
   }
 
-  handleUpdate = () => {
-    this.setState({
-      isUpdated: true,
-    })
-  }
-
   render(){
-    const {isClicked, isUpdated} = this.state;
+    const {isClicked} = this.state;
     const array = [...this.state.buildings];
     const url = "buildings-images/";
     const buildings = array.map(building => (
@@ -364,38 +343,13 @@ class Buildings extends React.Component{
       </div>
     ));
     return(
-      <div 
-        className="container-buildings" 
-        ref={this.container}>
-          <ManagementNav handleLogin={this.props.handleLogin}  />
-          {this.props.resolution >= 550 ?
-          <React.Fragment>
-            <AddingNewBuilding 
-              addBuilding={this.handleAddNewBuildingToState} 
-              buildings={this.state.buildings} 
-            />
-            {buildings}
-          </React.Fragment> : <Alert />}
-          <div style={{
-            display: 'block',
-            position: 'absolute',
-            top: '100px',
-            right: '350px',
-            height: '50px',
-            opacity: isUpdated === true ? 1 : 0,
-            paddingTop: '9px',
-            width: '140px',
-            borderRadius: '6px',
-            background: '#00a000',
-            color: 'white',
-            fontSize: '14px',
-            textAlign: 'center',
-            zIndex: '999',
-            boxSizing: 'border-box',
-            transition: 'opacity, 500ms',
-          }}>
-            Moduł został zaktualizowany
-          </div> 
+      <div ref={this.container} className="container-buildings">
+        <ManagementNav handleLogin={this.props.handleLogin}  />
+        <AddingNewBuilding 
+          addBuilding={this.handleAddNewBuildingToState} 
+          buildings={this.state.buildings} 
+        />
+        {buildings}
       </div>
     );
   }

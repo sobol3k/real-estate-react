@@ -51,8 +51,7 @@
   border-color: greenyellow;
 }
 .container-buildings .add-new-budiling .field-to-add-new-building {
-  position: absolute;
-  left: 150px;
+  margin-left: 150px;
   width: 400px;
   height: 35px;
   background: none;
@@ -259,6 +258,11 @@
   padding-left: 3px;
   box-sizing: border-box;
 }
+.container-buildings .building-description .second-page-information .particulars .particulars-row input[type=number]::-webkit-inner-spin-button,
+.container-buildings .building-description .second-page-information .particulars .particulars-row input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .container-buildings .info-about-too-small-resolution {
   width: 90%;
   margin: 0 auto;
@@ -280,6 +284,9 @@
 @media all and (max-width: 850px) {
   .container-buildings .add-new-budiling {
     width: 600px;
+  }
+  .container-buildings .add-new-budiling .field-to-add-new-building {
+    margin-left: 125px;
   }
   .container-buildings .building {
     width: 600px;
@@ -309,7 +316,7 @@
     height: 40px;
   }
   .container-buildings .add-new-budiling .field-to-add-new-building {
-    left: 75px;
+    margin-left: 75px;
     font-size: 11px;
   }
   .container-buildings .building {
@@ -333,5 +340,46 @@
   }
   .container-buildings .building .building-remove {
     right: 5px;
+  }
+}
+@media all and (max-width: 430px) {
+  .container-buildings .add-new-budiling {
+    width: 300px;
+  }
+  .container-buildings .add-new-budiling .submit-building {
+    left: 15px;
+    height: 50px;
+    width: 50px;
+  }
+  .container-buildings .building {
+    width: 300px;
+  }
+  .container-buildings .building .building-information .fa-info {
+    font-size: 22px;
+  }
+  .container-buildings .building .building-name {
+    left: 80px;
+    font-size: 12px;
+  }
+  .container-buildings .building .building-onwer {
+    display: none;
+  }
+  .container-buildings .building .building-picture {
+    left: 15px;
+    height: 50px;
+    width: 50px;
+  }
+  .container-buildings .building .building-remove .fa-trash {
+    font-size: 22px;
+  }
+  .container-buildings .building .building-description {
+    width: 300px;
+  }
+  .container-buildings .building .building-description .first-page-information .building-description-paragraph {
+    font-size: 12px;
+  }
+  .container-buildings .building .building-description .second-page-information .particulars-row input[type="number"],
+  .container-buildings .building .building-description .second-page-information .particulars-row select {
+    width: 130px;
   }
 }

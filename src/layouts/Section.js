@@ -18,7 +18,7 @@ const Section = (props) => {
         <Route path="/contact" component={Contact}/>
         <Route path="/for-investors-and-developers" component={InvestorsAndDevelopers}/>
         <Route path="/for-real-estate-agents" component={() => <Agents handleForm={props.handleForm}/>}/>
-        <Route path="/management" component={() => <Management handleLogin={props.handleLogin} isLogged={props.isLogged} resolution={props.resolution}/>}/>      
+        <Route path="/management" component={() => <Management handleLogin={props.handleLogin} isLogged={props.isLogged}/>}/>      
         <Route component={Error}/>
       </Switch>
     </section>

@@ -147,8 +147,9 @@ form .error-messsage {
 /* Responsive Web Design */
 @media all and (max-width: 450px) {
   .registration-form {
+    margin-top: 35px;
     width: 300px;
-    height: 600px;
+    height: 500px;
   }
   .registration-form .registration-h1 {
     margin: 0;
@@ -162,9 +163,12 @@ form .error-messsage {
     font-size: 15px;
     margin-bottom: -5px;
   }
+  .registration-form form .row {
+    margin-bottom: 18px;
+  }
   .registration-form form .row label input[type="text"] {
     width: 280px;
-    margin: 30px 5px 0 5px;
+    margin: 18px 5px 0 5px;
   }
   .registration-form form .row label input[type="password"],
   .registration-form form .row label input[type="email"] {
@@ -175,5 +179,8 @@ form .error-messsage {
   }
   .registration-form form .send-registration-form {
     width: 290px;
+  }
+  .registration-form .error-messsage {
+    font-size: 13px;
   }
 }

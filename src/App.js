@@ -12,19 +12,10 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      resolution: window.innerWidth, 
-      isLogged: true,
+      isLogged: false,
       isOpenedForm: false, 
       isVisibleMenu: false, 
       isOpenedDeleteAccountModal: false,  
-    }
-  }
-
-  componentDidMount(){
-    window.onresize = () => {
-      this.setState({
-        resolution: window.innerWidth,
-      })
     }
   }
 
@@ -55,7 +46,7 @@ class App extends React.Component{
   }
   
   render(){
-    const {resolution, isLogged, isOpenedForm, isVisibleMenu, isOpenedDeleteAccountModal} = this.state;
+    const {isLogged, isOpenedForm, isVisibleMenu, isOpenedDeleteAccountModal} = this.state;
     return(
       <>
         <Router>
@@ -74,9 +65,8 @@ class App extends React.Component{
               handleForm={this.handleFormClick} 
               handleLogin={this.handleLoginClick} 
               isLogged={isLogged} 
-              resolution={resolution} 
             />
-            <Footer resolution={resolution} />
+            <Footer/>
           </>
         </Router>
         {isOpenedForm && <RegistrationForm closeForm={this.handleFormClick} />}
