@@ -8,20 +8,32 @@ class Buildings extends React.Component{
     super(props)
     this.container = React.createRef();
     this.state = {
-      isClicked: false,
+      page: 'first-page',
       buildings: [
         {id: 0, picture: 'warsaw-spire.png', name: 'Warsaw Spire', owner: 'Immofinanz', totalSurface: 104300, category: 'A', status: 'istniejący',  
-        year: 2015, leasingTime: 5, currency: 'EUR', rentFrom: 20.00, rentTo: null, serviceCharge: 25.90, addOnFactor: 10.00, groundParking: null, undergroundParking: 200},
+        year: 2015, leasingTime: 5, currency: 'EUR', rentFrom: 20.00, rentTo: '', serviceCharge: 25.90, addOnFactor: 10.00, groundParking: '', undergroundParking: 200,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.612276205334!2d20.982080715945173!3d52.23226166526537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc84baa5393b%3A0x52f498460abf56dc!2sWarsaw%20Spire%2C%20plac%20Europejski%201%2C%2000-844%20Warszawa!5e0!3m2!1spl!2spl!4v1567535965114!5m2!1spl!2spl',
+        street: 'Europejski Plac 1', city: 'Warszawa', postcode: '00-844'},
         {id: 1, picture: 'szucha-premium-offices.png', name: 'Szucha Premium Offices', owner: 'Green Property Group', totalSurface: 12000, category: 'A', status: 'istniejący',  
-        year: 2017, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: 25.00, serviceCharge: 23.00, addOnFactor: 7.00, groundParking: null, undergroundParking: 250.00},
+        year: 2017, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: 25.00, serviceCharge: 23.00, addOnFactor: 7.00, groundParking: '', undergroundParking: 250.00,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.49639191984!2d21.02056741594481!3d52.21619876645125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecce0d4df15e1%3A0x502bb3c1a6848e77!2sSzucha%20Premium%20Offices!5e0!3m2!1spl!2spl!4v1567536151688!5m2!1spl!2spl',
+        street: 'Aleja Szucha 19', city: 'Warszawa', postcode: '00-580'},
         {id: 2, picture: 'centrum-marszalkowska.png', name: 'Centrum Marszałkowska', owner: 'Liebrecht & Wood', totalSurface: 16500, category: 'A', status: 'istniejący',  
-        year: 2018, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: 25.00, serviceCharge: 25.00, addOnFactor: 3.06, groundParking: 200.00, undergroundParking: 200.00},
+        year: 2018, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: 25.00, serviceCharge: 25.00, addOnFactor: 3.06, groundParking: 200.00, undergroundParking: 200.00,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.4772165629597!2d21.007303815945313!3d52.23471516508433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd81cc52b7d7%3A0xe38a9d353ad4c96e!2sCentrum%20Marsza%C5%82kowska!5e0!3m2!1spl!2spl!4v1567536313335!5m2!1spl!2spl',
+        street: 'Marszałkowska 126/134', city: 'Warszawa', postcode: '00-008'},
         {id: 3, picture: 'prosta-office-center.png', name: 'Prosta Office Center', owner: 'Cromwell Property group', totalSurface: 104300, category: 'A', status: 'istniejący',  
-        year: 2007, leasingTime: 5, currency: 'EUR', rentFrom: 17.50, rentTo: null, serviceCharge: 22.32, addOnFactor: 5.95, groundParking: null, undergroundParking: 150.00},
+        year: 2007, leasingTime: 5, currency: 'EUR', rentFrom: 17.50, rentTo: '', serviceCharge: 22.32, addOnFactor: 5.95, groundParking: '', undergroundParking: 150.00,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7064382268495!2d20.98509161594505!3d52.23055106539167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc9ad1f3573f%3A0x30d739f4c98d1450!2sProsta%20Office%20Centre!5e0!3m2!1spl!2spl!4v1567536387196!5m2!1spl!2spl',
+        street: 'Prosta 51', city: 'Warszawa', postcode: '00-838'},
         {id: 4, picture: 'skylight.png', name: 'Skylight', owner: 'Globalworth Poland', totalSurface: 21500, category: 'A', status: 'istniejący',  
-        year: 2007, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: null, serviceCharge: 24.00, addOnFactor: 6.20, groundParking: null, undergroundParking: 180.00},
+        year: 2007, leasingTime: 5, currency: 'EUR', rentFrom: 22.00, rentTo: '', serviceCharge: 24.00, addOnFactor: 6.20, groundParking: '', undergroundParking: 180.00,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.730625173404!2d21.000498415945078!3d52.23011166542417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x5dff6f01b36829b7!2sSkylight%20Office!5e0!3m2!1spl!2spl!4v1567536511644!5m2!1spl!2spl',
+        street: 'Złota 59', city: 'Warszawa', postcode: '00-120'},
         {id: 5, picture: 'rondo1.png', name: 'Rondo 1', owner: 'Deutsche Bank Real Estate', totalSurface: 103000, category: 'A', status: 'istniejący',  
-        year: 2006, leasingTime: 5, currency: 'EUR', rentFrom: 20.00, rentTo: 26.50, serviceCharge: 21.50, addOnFactor: 6.36, groundParking: null, undergroundParking: 250.00},
+        year: 2006, leasingTime: 5, currency: 'EUR', rentFrom: 20.00, rentTo: 26.50, serviceCharge: 21.50, addOnFactor: 6.36, groundParking: '', undergroundParking: 250.00,
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5624577160424!2d20.99754401579681!3d52.233166679760956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8ebec44dfb%3A0x5556c6cfea536839!2sRondo%201!5e0!3m2!1spl!2spl!4v1567534477096!5m2!1spl!2spl',
+        street: 'Rondo ONZ 1', city: 'Warszawa', postcode: '00-384'},
       ],
     }
   }
@@ -92,7 +104,7 @@ class Buildings extends React.Component{
     }
   }
 
-  handleAddNewBuildingToState = (name) => {
+  handleAddNewBuildingToState = (city, map, name, postcode, street) => {
     const buildings = [...this.state.buildings];
     const id = this.state.buildings.length;
     const newBudilding = {
@@ -100,20 +112,26 @@ class Buildings extends React.Component{
       picture: 'default-building-picture.png',
       name: name,
       owner: 'do ustalenia',
-      totalSurface: null,
+      totalSurface: '',
       category: 'A',
       status: 'istniejący',
-      year: null,
-      leasingTime: null,
+      year: '',
+      leasingTime: '',
       currency: 'EUR',
-      rentFrom: null,
-      rentTo: null,
-      serviceCharge: null,
-      addOnFactor: null,
-      groundParking: null,
-      undergroundParking: null,
+      rentFrom: '',
+      rentTo: '',
+      serviceCharge: '',
+      addOnFactor: '',
+      groundParking: '',
+      undergroundParking: '',
+      map: map,
+      street: street,
+      city: city,
+      postcode: postcode,
     }
+    // adding new building do copied array of state
     buildings.push(newBudilding);
+    // updating buildings state
     this.setState({
       buildings: buildings,
     })
@@ -146,7 +164,7 @@ class Buildings extends React.Component{
   }
 
   render(){
-    const {isClicked} = this.state;
+    const {page} = this.state;
     const array = [...this.state.buildings];
     const url = "buildings-images/";
     const buildings = array.map(building => (
@@ -210,8 +228,8 @@ class Buildings extends React.Component{
               height: 100 + '%',
               position: 'absolute',
               top: 0,
-              left: isClicked === true ? 0 : 600 + 'px',
-              opacity: isClicked === true ? 1 : 0,
+              left: page === 2 ? 0 : 600 + 'px',
+              opacity: page === 2 ? 1 : 0,
               background: '#d9d9d9',
               borderRadius: 10 + 'px',
             }}>
@@ -333,10 +351,40 @@ class Buildings extends React.Component{
               </div>
             </div>   
           </div>
+          <div className="third-page-information" 
+            style={{
+              width: 100 + '%',
+              height: 100 + '%',
+              position: 'absolute',
+              top: 0,
+              left: page === 3 ? 0 : 1200 + 'px',
+              opacity: page === 3 ? 1 : 0,
+              background: '#d9d9d9',
+              borderRadius: 10 + 'px',
+            }}>
+            <iframe src={building.map}  
+              allowFullScreen="" 
+              frameBorder="0" 
+              style={{
+                width: 100 + '%',
+                height: 200 + 'px',
+                borderTopLeftRadius: 10 + 'px',
+                borderTopRightRadius: 10 + 'px',  
+              }}>
+            </iframe>
+            <div className="building-address">
+              <address>
+                <p>{building.street}</p>
+                <p>{building.city}</p>
+                <p>{building.postcode}</p>
+              </address>
+            </div>
+          </div>
           <div className="building-description-menu">
               <ul>
-                <li onClick={() => this.setState({isClicked: false})}></li>
-                <li onClick={() => this.setState({isClicked: true})}></li>
+                <li onClick={() => this.setState({page: 1})}></li>
+                <li onClick={() => this.setState({page: 2})}></li>
+                <li onClick={() => this.setState({page: 3})}></li>
               </ul>
             </div>
         </div>
@@ -347,7 +395,8 @@ class Buildings extends React.Component{
         <ManagementNav handleLogin={this.props.handleLogin}  />
         <AddingNewBuilding 
           addBuilding={this.handleAddNewBuildingToState} 
-          buildings={this.state.buildings} 
+          buildings={this.state.buildings}
+          reference={this.container} 
         />
         {buildings}
       </div>

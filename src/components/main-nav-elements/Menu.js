@@ -11,11 +11,10 @@ const Menu = (props) => {
       })
     })
   })
-  
   return(
     <ul className="nav-main"> 
       <li onClick={props.handleMenu}>
-        <Link to="/" exact>Home</Link>
+        <Link to="/" exact={true}>Home</Link>
       </li>
       <li className="menu-form-whom">
         <ul className="submenu-for-whom">

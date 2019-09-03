@@ -3,11 +3,14 @@ import {Link} from 'react-router-dom';
 import './css/Footer.css';
 
 const Footer = (props) => {
-  const [resolution, setResolution] = useState(null);
+  const [resolution, updateResolution] = useState(window.innerWidth);
+  // handle to updating resoluton hook when user resizing window 
+  const handleResolution = () => {
+    return updateResolution(window.innerWidth);
+  }
+  // connecting the event onresize
   useEffect(() => {
-    window.onresize = () => {
-      setResolution(window.innerWidth);
-    }
+    window.onresize = handleResolution;
   })
   return(
     <footer>

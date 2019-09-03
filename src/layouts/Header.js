@@ -4,18 +4,18 @@ import './css/Header.css';
 const Header = () => {
   const headerElement = React.createRef();
   const [logo, setHeaderLogo] = useState(0);
+  const changeHeaderLogo = () => {
+    if(logo === 3){
+      setHeaderLogo(logo - logo);
+    } else{
+      setHeaderLogo(logo + 1);
+    }
+  }
   useEffect(() => {
-    setTimeout(() => {
-      if(logo === 3){
-        setHeaderLogo(logo - logo);
-      } else{
-        setHeaderLogo(logo + 1);
-      } 
-    }, 4000)
+    setTimeout(changeHeaderLogo, 4000);
   })
   return(
-    <header 
-      ref={headerElement} 
+    <header ref={headerElement}
       style={{
         backgroundImage: `url("/other-images/logos/${logo}.jpg")`
       }}

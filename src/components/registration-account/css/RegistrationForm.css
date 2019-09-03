@@ -147,9 +147,9 @@ form .error-messsage {
 /* Responsive Web Design */
 @media all and (max-width: 450px) {
   .registration-form {
-    margin-top: 35px;
+    margin-top: 45px;
     width: 300px;
-    height: 500px;
+    height: 450px;
   }
   .registration-form .registration-h1 {
     margin: 0;
@@ -164,7 +164,7 @@ form .error-messsage {
     margin-bottom: -5px;
   }
   .registration-form form .row {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
   .registration-form form .row label input[type="text"] {
     width: 280px;
@@ -182,5 +182,6 @@ form .error-messsage {
   }
   .registration-form .error-messsage {
     font-size: 13px;
+    margin-bottom: 15px;
   }
 }

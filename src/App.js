@@ -12,7 +12,7 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      isLogged: false,
+      isLogged: true,
       isOpenedForm: false, 
       isVisibleMenu: false, 
       isOpenedDeleteAccountModal: false,  

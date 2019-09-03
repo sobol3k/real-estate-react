@@ -20,31 +20,31 @@ Website about commercial real estate like offices buildings in the Warsaw city. 
 <strong>The password of your account must contains</strong>
 <ul>
  <li>one lowercase</li>
- <li>one capital letter/li>
+ <li>one capital letter</li>
  <li>one</li>
 </ul>
 <hr>
 <img src="https://s6.ifotos.pl/img/how-to-cr_qssnhsq.png" />
 <img src="https://s6.ifotos.pl/img/registrat_qssnhap.png" />
-<p>when you created account in app you can go to management subpage of buildings. Click in the management button.<p>
+<p>After created account in application you can go to management subpage of buildings. Click in the management button.<p>
 <img src="https://s6.ifotos.pl/img/managemen_qssnhan.png" />
  
  <h3>Login form</h3>
  <hr>
- <p>Fill out the form with the data you used during registration</p>
+ <p>Fill out the form with the data which you used during registration process.</p>
  <img src="https://s6.ifotos.pl/img/login-for_qssnhae.png" />
 
 <h3>Management</h3>
 <hr>
-<p>Here you can add a new building or delete any building form list. If you can change data of building like ren, total surface, cost of parking udernground or ground and other important data like lease terms.</p>
+<p>Here you can add a new building or delete any building from list. You can too change data of building like rent, total surface, cost of parking udernground/ground and other important data like lease terms.</p>
 <img src="https://s6.ifotos.pl/img/managemen_qssnhaa.png" />
-<p>Click the icon of information and you will see a modal with describe of building, picture and form with data.</p>
+<p>Click the icon of information you will should see a modal with description of building, picture and form with data.</p>
 <img src="https://s6.ifotos.pl/img/modal-inf_qssnhqh.png" />
 <img src="https://s6.ifotos.pl/img/second-pa_qssnhqw.png" />
 
 <h3>Removing account</h3>
 <hr>
-<p>If you want to remove your account click in the crimson button which is located in top page.</p>
+<p>If you want to remove your account, click in the crimson button which is located in top page.</p>
 
 <h3>Contact form</h3>
 <hr>

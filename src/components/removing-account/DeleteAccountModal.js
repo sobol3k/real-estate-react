@@ -32,7 +32,7 @@ const DeleteAccountModal = (props) => {
         <button 
           type="button" 
           className="save-account-btn" 
-          onClick={props.handleDeleteAccountModalClick}>
+          onClick={props.closeModal}>
           Zachowaj
         </button>
       </div>
